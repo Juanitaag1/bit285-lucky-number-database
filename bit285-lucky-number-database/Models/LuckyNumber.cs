@@ -4,10 +4,14 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace lucky_number_database.Models
 {
     public class LuckyNumber
     {
+        [Key]
+        public int LuckyNumberId { get; set; }
+        public string getName { get; set; }
         private Random _random = new Random();
         private int[] _spinner = new int[3];
         private decimal _balance;
